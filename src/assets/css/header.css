@@ -1,0 +1,29 @@
+.logo {
+    width: 100px;
+    height: 100px;
+}
+
+.icon {
+    width: 32px;
+    height: 32px;
+    margin-left: 20px;
+}
+
+.navbar-collapse {
+    justify-content: center;
+}
+
+.nav-item {
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.nav-item > a.active {
+    color: #0F715C!important;
+    font-weight: bold;
+    border-bottom: 3px solid #0F715C;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: #333;
+}
