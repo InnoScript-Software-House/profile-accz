@@ -1,0 +1,39 @@
+.intro-title {
+    letter-spacing: -0.015em;
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 29px;
+}
+
+.intro-box {
+    margin: 30px 0;
+    width: auto;
+    border-radius: 10px;
+    padding: 10px 0;
+    position: relative;
+}
+
+.intro-box::after {
+    display: block;
+    content: "";
+    width: 20%;
+    height: 20%;
+    border-left: 4px solid #0F715C;
+    border-top: 4px solid #0F715C;
+    border-radius: 3px 0px 0px 0px;
+    position: absolute;
+    left: -18px;
+    top: -10px;
+}
+
+.intro-img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.paragraph p {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 32px;
+    letter-spacing: -0.015em;
+}

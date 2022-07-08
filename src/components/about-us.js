@@ -18,7 +18,7 @@ const AboutUsComponent = () => {
             <div className='col-md-6'>
                 <div className='d-flex flex-row justify-content-end'>
                     <div className='profile-box'>
-                        <img className='profile-image background' src={profile} alt="Aye Chyo Chyo Zin" title='Aye Chyo Chyo Zin' />
+                        <img className='profile-image' src={profile} alt="Aye Chyo Chyo Zin" title='Aye Chyo Chyo Zin' />
                     </div>
                 </div>
             </div>

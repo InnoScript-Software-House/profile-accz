@@ -8,7 +8,7 @@ import skype from '../assets/images/skype.png';
 import '../assets/css/header.css';
 
 const mainMenu = [
-    { name: "Work", path:"/work", html:'<span className="sr-only"></span>'},
+    { name: "Work", path:"/work"},
     { name: "About", path: "/about" },
     { name: "Resume", path: "/resume"}
 ];
@@ -48,7 +48,7 @@ const Header = () => {
                                 <NavLink 
                                     to={menu.path} 
                                     className={(isActive) => {
-                                        console.log(isActive)
+                                        // console.log(isActive)
                                         return(
                                             isActive === true ? 'nav-link active' : 'nav-link'
                                         )
