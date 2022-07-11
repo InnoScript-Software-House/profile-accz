@@ -6,11 +6,13 @@
 }
 
 .intro-box {
-    margin: 30px 0;
+    margin: 30px;
     width: auto;
     border-radius: 10px;
-    padding: 10px 0;
     position: relative;
+    box-shadow: 8px 8px 40px rgb(0 0 0 / 10%);
+    -webkit-box-shadow: 8px 8px 40px rgb(0 0 0 / 10%);
+    -moz-box-shadow: 8px 8px 40px rgb(0 0 0 / 10%);
 }
 
 .intro-box::after {

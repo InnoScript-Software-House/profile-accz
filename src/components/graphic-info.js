@@ -1,4 +1,5 @@
-import React from 'react'
+import React, { useState, useCallback } from 'react';
+import Viewer from 'react-viewer';
 
 const graphicInfo = [
   {
@@ -58,16 +59,38 @@ const graphicInfo = [
 ]
 
 const GraphicInformation = () => {
+
+  const [ visible, setVisible ] = useState(false);
+  const [currentImage, setCurrentImage] = useState(graphicInfo[0]);
+
+  const openImageViewer = useCallback((index) => {
+    setCurrentImage(graphicInfo[index]);
+    setVisible(true);
+  }, []);
+
   return (
     <>
       <div className='row mt-3'>
+      <Viewer
+        visible={visible}
+        onClose={() => { setVisible(false); } }
+        images={[{src: currentImage.img, alt: currentImage.label, title: currentImage.label }]}
+      />
         {
           graphicInfo.map((data, id) => {
             return (
-              <div key={id} className='col-md-6 mb-5'>
-                {/* <Link to='/about' className='info-link'> */}
+              <div 
+                key={id} 
+                className='col-md-6 mb-5 card-detail'
+                onClick={() => openImageViewer(id)}
+              >
                 <div className='card info-wrapper'>
-                  <img src={data.img} className="card-img-top" alt="image not found" />
+                  <img 
+                    className="card-img-top"
+                    src={data.img} 
+                    alt={data.label} 
+                    title={data.label} 
+                  />
                   <div className='card-body'>
                     <p className='content-label'> {data.label} </p>
                     <span className='content-one'>
@@ -78,7 +101,6 @@ const GraphicInformation = () => {
                     </span>
                   </div>
                 </div>
-                {/* </Link> */}
               </div>
             )
           })

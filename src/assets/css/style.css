@@ -48,3 +48,19 @@
     color: #FFF;
     font-weight: 600;
 }
+
+.website_image {
+    width: 100%;
+}
+
+
+.footer-menu-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.footer-link {
+    cursor: pointer;
+}

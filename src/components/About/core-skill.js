@@ -60,7 +60,7 @@ const left = [
 const CoreSkill = () => {
     return (
         <>
-            <div className='row justify-content-center align-items-center'>
+            <div className='row justify-content-center align-items-center mt-3 mb-3'>
                 <label className='core-title'>What are my core skills?</label>
             </div>
             <div className='row g-0'>
@@ -70,7 +70,7 @@ const CoreSkill = () => {
                             return (
                                 <div className='core-wrapper' key={`core-right ${id}`}>
                                     <div className='row g-0'>
-                                        <img className='core-img' src={data.img} alt='image not found'/>
+                                        <img className='core-img' src={data.img} alt='image not found' title={data.title} />
                                         <label>{data.title}</label>
                                     </div>
                                     <div className="progress-bar">

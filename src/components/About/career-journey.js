@@ -3,10 +3,10 @@ import '../../assets/css/about/career-journey.css'
 const Career = () => {
     return (
         <>
-            <div className='row justify-content-center align-items-center'>
-                <label className='career-title'>How is my career journey?</label>
+            <div className='row justify-content-center align-items-center mt-3 mb-3'>
+                <label className='career-title mb-3 pb-3'>How is my career journey?</label>
             </div>
-            <div className='row'>
+            <div className='row mt-3 pt-3'>
                 {/* one section */}
                 <div className='col-md-6'>
                     <div className='career-box-left-one'>

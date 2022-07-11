@@ -3,6 +3,7 @@ import Career from "../components/About/career-journey";
 import CoreSkill from "../components/About/core-skill";
 import Introduction from "../components/About/intro";
 import Header from "../components/header";
+import Footer from '../components/footer';
 
 const About = () => {
     return(
@@ -12,6 +13,7 @@ const About = () => {
             <CoreSkill />
             <Career />
             <BackgroundAndQualification />
+            <Footer />
         </div>
     );
 }

@@ -1,14 +1,13 @@
-import { Link, NavLink } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import logo from '../assets/images/logo.png';
 import gmail from '../assets/images/gmail.png';
 import behance from '../assets/images/behance.png';
 import linkedin from '../assets/images/linkedin.png';
 import skype from '../assets/images/skype.png';
-
 import '../assets/css/header.css';
 
 const mainMenu = [
-    { name: "Work", path:"/work"},
+    { name: "Work", path:"/"},
     { name: "About", path: "/about" },
     { name: "Resume", path: "/resume"}
 ];
@@ -45,15 +44,7 @@ const Header = () => {
                     {mainMenu.map((menu, index) => {
                         return(
                             <li className="nav-item" key={`main_menu_id_${index}`}>
-                                <NavLink 
-                                    to={menu.path} 
-                                    className={(isActive) => {
-                                        // console.log(isActive)
-                                        return(
-                                            isActive === true ? 'nav-link active' : 'nav-link'
-                                        )
-                                    }}
-                                > 
+                                <NavLink to={menu.path} className="nav-link"> 
                                     {menu.name} 
                                     {menu.html && (<div dangerouslySetInnerHTML={{__html: menu.html}} />)}
                                 </NavLink>
@@ -66,13 +57,11 @@ const Header = () => {
             <div className='navbar-text'>
                 {socialMediaMenu.map((menu, index) => {
                     return(
-                        <Link 
-                            key={`social_media_menu_id_${index}`} 
-                            to={{ pathname: menu.path }}
-                            target="_blank"
-                        > 
-                             <img src={menu.icon} className="icon" alt={menu.name} title={menu.name} />
-                        </Link>
+                        <div className='footer-link'key={`social_media_menu_id_${index}`} onClick={() => {
+                            window.open(menu.path, '_blank');
+                        }}> 
+                            <img src={menu.icon} className="icon" alt={menu.name} title={menu.name} />
+                        </div>
                     )
                 })}
             </div>
